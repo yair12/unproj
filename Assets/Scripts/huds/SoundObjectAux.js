@@ -5,7 +5,7 @@
 class SoundObjectAux extends MonoBehaviour
 {
 	public var soundGenerator : SoundObject;
-	
+	 
     function Awake()
     {
         if(rigidbody != null) rigidbody.Sleep();
