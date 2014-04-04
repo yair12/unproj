@@ -101,7 +101,7 @@ class SoldierDamageControl extends MonoBehaviour
 				SoldierController.dead = true;
 				Debug.Log ("EMO;PlayerDead;"+DeadCounter + ";" + System.DateTime.Now.ToString ());
 				if(GUIOptimizer.score - 100 < 0)
-					GUIOptimizer.score = 0;
+					GUIOptimizer.score = 0; 
 				else
 					GUIOptimizer.score = GUIOptimizer.score - 100;
 				Debug.Log ("EMO;PlayerDead;"+DeadCounter + ";" + System.DateTime.Now.ToString ());
