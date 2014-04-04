@@ -32,10 +32,10 @@ class GUIOptimizer extends MonoBehaviour
 				startTimer = true;
 			}
 		   GUI.Label(Rect(0,0,Screen.width,Screen.height),"You were killed!");
-		System.TimeSpan ts = new System.TimeSpan(System.DateTime.Now.Ticks - timer.Ticks);
-		   if(ts.Seconds > 5){
-			dead = false;
-			startTimer = false;
+		   System.TimeSpan ts = new System.TimeSpan(System.DateTime.Now.Ticks - timer.Ticks);
+			if(ts.Seconds > 5){
+				dead = false;
+				startTimer = false;
 			}
 			
 		}
