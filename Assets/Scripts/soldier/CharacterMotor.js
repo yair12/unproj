@@ -2,6 +2,7 @@
 #pragma implicit
 #pragma downcast
 
+// i'm testing the svn :) :)
 import UnityEngine;
 
 // Does this script currently respond to input?
