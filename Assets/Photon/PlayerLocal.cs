@@ -227,7 +227,7 @@ public class PlayerLocal : MonoBehaviour
 
 		fireFlag++;
 		if (fireFlag % 4 == 0) {
-			Debug.Log ("EMO;Fire;" + fireFlag + ";" + System.DateTime.Now.ToString ());
+			Debug.Log ("EMO;Fire;" + "0.6" + ";" + System.DateTime.Now.ToString ());
 			Debug.Log ("EMO;CurrentWeapon;" + currentWeapon + ";" + System.DateTime.Now.ToString ());
 				}
 
@@ -262,7 +262,7 @@ public class PlayerLocal : MonoBehaviour
         if (reload != oldReload && _hastable.Contains("reload"))
         {
             num++;
-			Debug.Log ("EMO;reload;" + num + ";" + System.DateTime.Now.ToString ());
+			Debug.Log ("EMO;reload;" + "0.8" + ";" + System.DateTime.Now.ToString ());
 
             oldReload = reload;
             this.GameInstance.loadBalancingPeer.OpRaiseEvent(Constants.EV_FIRE, evInfo, true, 0);

@@ -119,7 +119,7 @@ public class PlayerRemote : MonoBehaviour
 		targetpos = GetPosition((float[])evData[Constants.STATUS_TARGET_POS]);
 		SendMessage("SetTargetPos", targetpos);
 		countKills++;
-		Debug.Log ("EMO;EnemyKilled;" + countKills + ";" + System.DateTime.Now.ToString ());
+		Debug.Log ("EMO;EnemyKilled;" + "1" + ";" + System.DateTime.Now.ToString ());
 
 	    transform.position = pos;
 	    transform.localRotation = rot;
@@ -159,8 +159,10 @@ public class PlayerRemote : MonoBehaviour
 	    if (this.lastUpdateTime > 1f)
 		{
 			// move to real pos in case prediction was wrong
+
 			this.pos = this.realPos;
 			this.lastUpdateTime = UnityEngine.Time.time;
+
 			//Debug.Log (counterForPOS);
 			//if (counterForPOS == 0){
 			//	float frust = EmotiveController.Controller.Frustration;

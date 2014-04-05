@@ -2,6 +2,8 @@
 #pragma implicit
 #pragma downcast
 
+import UnityEngine;
+
 // Does this script currently respond to input?
 var canControl : boolean = true;
 public var timerPOS : float; 
@@ -176,7 +178,7 @@ var groundNormal : Vector3 = Vector3.zero;
 
 private var lastGroundNormal : Vector3 = Vector3.zero;
 
-private var tr : Transform;
+public var tr : Transform;
 
 private var controller : CharacterController;
 
@@ -222,6 +224,10 @@ private function UpdateFunction () {
 	{
 		timerPOS = 100;
 		Debug.Log("EMO;"+"Position;"+lastPosition+";"+ System.DateTime.Now.ToString());
+		
+
+		//var distance = Vector3.Distance(ExitGames.Client.Photon.PlayerRemote.pos,lastPosition);
+		//Debug.Log("EMO;"+"Distance;"+distance+";"+ System.DateTime.Now.ToString());
 	}
 	
 	timerPOS--;

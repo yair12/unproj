@@ -99,12 +99,13 @@ class SoldierDamageControl extends MonoBehaviour
 			{
 			    AtackerName = hit;
 				SoldierController.dead = true;
-				Debug.Log ("EMO;PlayerDead;"+DeadCounter + ";" + System.DateTime.Now.ToString ());
+				Debug.Log ("EMO;PlayerDead;"+0.9 + ";" + System.DateTime.Now.ToString ());
 				if(GUIOptimizer.score - 100 < 0)
-					GUIOptimizer.score = 0; 
+					GUIOptimizer.score = 0;
 				else
 					GUIOptimizer.score = GUIOptimizer.score - 100;
-				Debug.Log ("EMO;PlayerDead;"+DeadCounter + ";" + System.DateTime.Now.ToString ());
+				Debug.Log ("EMO;Score;"+GUIOptimizer.score + ";" + System.DateTime.Now.ToString ());
+				GUIOptimizer.dead = 1;
 				DeadCounter++;
 				DisplayKillYou = true;
 				
@@ -162,7 +163,7 @@ class SoldierDamageControl extends MonoBehaviour
 			{
 			    AtackerName = hit;
 			    DisplayKillYou = true;
-			    Debug.Log ("EMO;PlayerDead;"+DeadCounter + ";" + System.DateTime.Now.ToString ());
+			    Debug.Log ("EMO;PlayerDead;"+"0.9" + ";" + System.DateTime.Now.ToString ());
 			    DeadCounter++;
 				SoldierController.dead = true;
  	
